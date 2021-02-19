@@ -18,8 +18,10 @@ export class PorPaisComponent {
     this.paises = [];
   }
 
-  buscar(){
+  buscar( termino: string ){
     this.hayError = false;
+    this.termino = termino;
+    
     this._paisService.buscarPais( this.termino ).subscribe(
       response => {
         this.paises = response;
