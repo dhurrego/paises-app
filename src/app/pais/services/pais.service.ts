@@ -28,5 +28,13 @@ export class PaisService {
 
   }
 
+  getPaisPorCodigo( id: string ): Observable<Country>{
+
+    const url = `${ this._apiUrl }/alpha/${ id }`;
+
+    return this._http.get<Country>( url );
+
+  }
+
   
 }
