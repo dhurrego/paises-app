@@ -13,7 +13,8 @@ export class PorPaisComponent {
   public termino: string = '';
   public hayError: boolean = false;
   public paises: Country[];
-  
+  public buscado: string = 'País';
+
   constructor( private _paisService: PaisService ) { 
     this.paises = [];
   }
